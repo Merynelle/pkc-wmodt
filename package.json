@@ -1,0 +1,30 @@
+{
+  "name": "PKC",
+  "version": "1.0.0",
+  "description": "pkc publishing",
+  "main": "pkc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node pkc.js"
+  },
+  "engine": {
+    "node": "8.11.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "gulp-serve": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
