@@ -329,7 +329,7 @@ async function addSubOffering(suboffering) {
 }
 
 async function updateSubOffering(suboffering) {
-    console.log(suboffering.ID);
+    console.log(suboffering.Title);
 
     var result;
 
@@ -353,7 +353,7 @@ async function updateSubOffering(suboffering) {
             "content-type": "application/json;odata=verbose"
         },
         body: {
-            __metadata: { type: 'SP.Data.List_x0020_SummaryListItem' },
+            __metadata: { type: 'SP.Data.ListSummaryListItem' },
             Title: updatedTitle,
             VersionText: updatedVersionText,
             FilePath: updatedFilePath,
@@ -403,7 +403,7 @@ async function sync() {
 
     async.map(result.to_update, suboffering => {
         updateSubOffering(suboffering);
-        //console.log('check suboffering', suboffering)
+        console.log('Update', suboffering)
     }, (err, res) => {
         console.log(err ? "err:" + err : "res:" + res);
     });
