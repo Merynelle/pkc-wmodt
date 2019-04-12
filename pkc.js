@@ -403,7 +403,7 @@ async function sync() {
 
     async.map(result.to_update, suboffering => {
         updateSubOffering(suboffering);
-        console.log('Update', suboffering)
+        //console.log('Update', suboffering)
     }, (err, res) => {
         console.log(err ? "err:" + err : "res:" + res);
     });
